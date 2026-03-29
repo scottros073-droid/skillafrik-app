@@ -1,0 +1,358 @@
+/* src/pages/Premium/MonetizationUpgrades.css */
+
+.monetization-upgrades {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+}
+
+.upgrades-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upgrades-header h1 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  color: #333;
+  font-weight: 700;
+}
+
+.upgrades-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+/* Upgrade Card */
+.upgrade-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.upgrade-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.upgrade-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.verification-badge::before {
+  background: linear-gradient(90deg, #28a745, #1e7e34);
+}
+
+.profile-boost::before {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+}
+
+.featured-agent::before {
+  background: linear-gradient(90deg, #e83e8c, #c009d1);
+}
+
+.badge-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.upgrade-card h2 {
+  font-size: 22px;
+  margin: 0 0 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #007bff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.verification-badge .price {
+  color: #28a745;
+}
+
+.profile-boost .price {
+  color: #ff9800;
+}
+
+.featured-agent .price {
+  color: #e83e8c;
+}
+
+.duration {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex: 1;
+}
+
+.benefits li {
+  padding: 10px 0;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.benefits li:last-child {
+  border-bottom: none;
+}
+
+.benefits li::before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px 0;
+  flex: 1;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-family: inherit;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #1e7e34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #545b62;
+}
+
+.btn-large {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alerts */
+.alert {
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h3 {
+  font-size: 24px;
+  margin: 0 0 30px 0;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 15px;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-item h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .monetization-upgrades {
+    padding: 20px;
+  }
+
+  .upgrades-header h1 {
+    font-size: 28px;
+  }
+
+  .upgrades-header p {
+    font-size: 16px;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .upgrade-card {
+    padding: 20px;
+  }
+
+  .badge-icon {
+    font-size: 36px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .faq-section {
+    padding: 20px;
+  }
+
+  .faq-section h3 {
+    font-size: 20px;
+  }
+
+  .faq-item h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upgrades-header h1 {
+    font-size: 24px;
+  }
+
+  .upgrade-card {
+    padding: 15px;
+  }
+
+  .badge-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .upgrade-card h2 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .benefits li {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+}
