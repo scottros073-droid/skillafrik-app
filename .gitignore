@@ -1,0 +1,1 @@
+﻿node_modules/\n.env\n.env.*\ndist/\nbuild/\ncoverage/\n*.log\nuploads/\ntemp/\n.cache/\n.DS_Store\n.vscode/settings.json\n.vercel\n
